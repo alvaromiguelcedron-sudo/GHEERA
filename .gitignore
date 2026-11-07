@@ -1,0 +1,25 @@
+# Variables de entorno
+.env
+.env.*
+!.env.example
+
+# Dependencias
+node_modules/
+frontend/node_modules/
+
+# Archivos generados
+dist/
+frontend/dist/
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Archivos temporales
+*.tmp
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
