@@ -1,3 +1,19 @@
+:root {
+  --color-fondo: #080F1D;
+  --color-superficie: #111C2E;
+  --color-superficie-secundaria: #19283D;
+  --color-texto: #F1F5F9;
+  --color-texto-secundario: #94A3B8;
+  --color-acento: #06B6D4;
+  --color-borde: #26364B;
+  --color-exito: #22C55E;
+  --color-alerta: #F59E0B;
+  --color-error: #EF4444;
+}
+
+
+
+
 @import "tailwindcss";
 
 * {
@@ -32,4 +48,62 @@ input:-webkit-autofill:focus {
   -webkit-text-fill-color: #ffffff;
   -webkit-box-shadow: 0 0 0 1000px #293B55 inset;
   transition: background-color 9999s ease-in-out 0s;
+}
+
+/* =====================================
+   GHEERA - BASE RESPONSIVE GLOBAL
+===================================== */
+
+/* Evitar desbordamientos horizontales */
+html,
+body,
+#root {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Permitir que los elementos se adapten */
+.dashboard,
+.dashboard-content,
+.dashboard-content > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* Imágenes y elementos multimedia */
+img,
+svg {
+  max-width: 100%;
+}
+
+/* Tablas: permitir desplazamiento cuando sea necesario */
+table {
+  max-width: 100%;
+}
+
+/* Formularios adaptables */
+input,
+select,
+textarea {
+  max-width: 100%;
+  min-width: 0;
+}
+
+/* Adaptación general para celulares */
+@media (max-width: 700px) {
+  .dashboard-content {
+    width: 100%;
+    min-width: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .dashboard-content > * {
+    width: 100%;
+    min-width: 0;
+  }
+
+  button {
+    max-width: 100%;
+  }
 }

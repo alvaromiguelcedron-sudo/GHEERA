@@ -1,0 +1,645 @@
+
+.config-page {
+  width: 100%;
+  color: #f1f5f9;
+  animation: configEntrada 0.3s ease;
+}
+
+@keyframes configEntrada {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.config-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.config-eyebrow {
+  color: #22d3ee;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.config-header h1 {
+  margin: 7px 0;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.config-header p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.config-header-icon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  color: #22d3ee;
+  background: #102b40;
+  border: 1px solid #164e63;
+  border-radius: 15px;
+}
+
+.config-mensaje {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 15px;
+  margin-bottom: 18px;
+  color: #4ade80;
+  background: #153b35;
+  border: 1px solid #166534;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.config-layout {
+  display: grid;
+  grid-template-columns: 255px minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.config-menu,
+.config-panel {
+  min-width: 0;
+  background: #111d30;
+  border: 1px solid #23334a;
+  border-radius: 15px;
+}
+
+.config-menu {
+  padding: 15px;
+}
+
+.config-menu-titulo {
+  display: block;
+  padding: 8px 10px 13px;
+  color: #64748b;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.config-menu-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 10px;
+  margin-bottom: 5px;
+  color: #94a3b8;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.config-menu-item:hover {
+  color: #e2e8f0;
+  background: #16263b;
+}
+
+.config-menu-item.activo {
+  color: #22d3ee;
+  background: #123448;
+  border-color: #155e75;
+}
+
+.config-menu-item > svg {
+  flex-shrink: 0;
+}
+
+.config-menu-item span {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.config-menu-item strong {
+  font-size: 12px;
+}
+
+.config-menu-item small {
+  color: #64748b;
+  font-size: 10px;
+}
+
+.config-panel {
+  padding: 25px;
+}
+
+.config-titulo-seccion {
+  margin-bottom: 25px;
+}
+
+.config-titulo-seccion h2 {
+  margin: 0 0 7px;
+  font-size: 19px;
+}
+
+.config-titulo-seccion p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.config-formulario {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.config-formulario label,
+.config-modal form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #cbd5e1;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.config-formulario input,
+.config-formulario select,
+.config-modal form input,
+.config-modal form select {
+  width: 100%;
+  height: 44px;
+  padding: 0 12px;
+  color: #f1f5f9;
+  background: #0b1525;
+  border: 1px solid #293b53;
+  border-radius: 9px;
+  outline: none;
+  font-size: 12px;
+}
+
+.config-formulario input:focus,
+.config-formulario select:focus,
+.config-modal form input:focus,
+.config-modal form select:focus {
+  border-color: #22d3ee;
+}
+
+.config-formulario select option,
+.config-modal form select option {
+  background: #111d30;
+}
+
+.config-info {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 13px;
+  color: #94a3b8;
+  background: #0b2030;
+  border: 1px solid #164e63;
+  border-radius: 9px;
+}
+
+.config-info svg {
+  flex-shrink: 0;
+  color: #22d3ee;
+}
+
+.config-info span {
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.config-guardar {
+  width: fit-content;
+  min-height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 0 18px;
+  color: #06131f;
+  background: #22d3ee;
+  border: 0;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.config-guardar:hover {
+  background: #67e8f9;
+  transform: translateY(-1px);
+}
+
+.config-usuarios-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.config-agregar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 10px 13px;
+  color: #06131f;
+  background: #22d3ee;
+  border: 0;
+  border-radius: 9px;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.config-agregar:hover {
+  background: #67e8f9;
+}
+
+.config-usuarios-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-bottom: 18px;
+}
+
+.config-usuario {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 14px;
+  background: #0b1525;
+  border: 1px solid #1e3047;
+  border-radius: 11px;
+}
+
+.config-usuario-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  color: #22d3ee;
+  background: #123448;
+  border-radius: 11px;
+}
+
+.config-usuario-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.config-usuario-info > strong {
+  font-size: 12px;
+}
+
+.config-usuario-info > span {
+  color: #94a3b8;
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+
+.config-usuario-etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 3px;
+}
+
+.config-rol,
+.config-estado {
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 9px;
+  font-weight: 750;
+}
+
+.config-rol.admin {
+  color: #c4b5fd;
+  background: #29244a;
+}
+
+.config-rol.vendedor {
+  color: #22d3ee;
+  background: #123448;
+}
+
+.config-estado.activo {
+  color: #4ade80;
+  background: #153b35;
+}
+
+.config-estado.inactivo {
+  color: #fb7185;
+  background: #451d2a;
+}
+
+.config-usuario-acciones {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.config-usuario-acciones button {
+  min-height: 32px;
+  display: grid;
+  place-items: center;
+  padding: 0 8px;
+  color: #94a3b8;
+  background: #16263b;
+  border: 1px solid #293b53;
+  border-radius: 7px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.config-usuario-acciones button:hover {
+  color: #22d3ee;
+  border-color: #155e75;
+}
+
+.config-usuario-acciones button.config-eliminar:hover {
+  color: #fb7185;
+  border-color: #713044;
+}
+
+.config-rol-card {
+  padding: 18px;
+  margin-bottom: 15px;
+  background: #0b1525;
+  border: 1px solid #293b53;
+  border-radius: 12px;
+}
+
+.config-rol-card-titulo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #293b53;
+}
+
+.config-rol-icon {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+}
+
+.config-rol-icon.admin {
+  color: #c4b5fd;
+  background: #29244a;
+}
+
+.config-rol-icon.vendedor {
+  color: #22d3ee;
+  background: #123448;
+}
+
+.config-rol-card h3 {
+  margin: 0 0 5px;
+  font-size: 14px;
+}
+
+.config-rol-card-titulo span {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.config-rol-card ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 20px;
+  padding: 17px 0 0 18px;
+  margin: 0;
+}
+
+.config-rol-card li {
+  padding-left: 3px;
+  color: #cbd5e1;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.config-rol-card li::marker {
+  color: #22d3ee;
+}
+
+.config-campo-destacado {
+  grid-column: 1 / -1;
+  padding: 16px;
+  background: #0b2030;
+  border: 1px solid #164e63;
+  border-radius: 11px;
+}
+
+.config-campo-destacado label {
+  max-width: 260px;
+}
+
+.config-input-sufijo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.config-input-sufijo input {
+  flex: 1;
+}
+
+.config-input-sufijo span {
+  color: #22d3ee;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.config-campo-destacado > small {
+  display: block;
+  margin-top: 12px;
+  color: #94a3b8;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.config-preferencias {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.config-preferencia {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 16px;
+  background: #0b1525;
+  border: 1px solid #293b53;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.config-preferencia div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.config-preferencia strong {
+  font-size: 12px;
+}
+
+.config-preferencia span {
+  color: #94a3b8;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.config-preferencia input {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  accent-color: #22d3ee;
+  cursor: pointer;
+}
+
+.config-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(2, 8, 23, 0.78);
+  backdrop-filter: blur(5px);
+}
+
+.config-modal {
+  position: relative;
+  width: 100%;
+  max-width: 430px;
+  padding: 28px;
+  background: #111d30;
+  border: 1px solid #293b53;
+  border-radius: 17px;
+}
+
+.config-modal-cerrar {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: grid;
+  place-items: center;
+  color: #94a3b8;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.config-modal-icon {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 15px;
+  color: #22d3ee;
+  background: #123448;
+  border-radius: 12px;
+}
+
+.config-modal h2 {
+  margin: 0 0 7px;
+  font-size: 20px;
+}
+
+.config-modal > p {
+  margin: 0 0 22px;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.config-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.config-modal form .config-guardar {
+  width: 100%;
+  margin-top: 5px;
+}
+
+@media (max-width: 950px) {
+  .config-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .config-menu {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 5px;
+  }
+
+  .config-menu-titulo {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 650px) {
+  .config-header h1 {
+    font-size: 25px;
+  }
+
+  .config-menu {
+    grid-template-columns: 1fr;
+  }
+
+  .config-panel {
+    padding: 17px;
+  }
+
+  .config-formulario {
+    grid-template-columns: 1fr;
+  }
+
+  .config-rol-card ul {
+    grid-template-columns: 1fr;
+  }
+
+  .config-usuarios-titulo {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .config-agregar {
+    width: 100%;
+  }
+
+  .config-usuario {
+    flex-wrap: wrap;
+  }
+
+  .config-usuario-acciones {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .config-usuario-acciones button:first-child {
+    margin-right: auto;
+  }
+}

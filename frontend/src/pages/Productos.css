@@ -718,3 +718,137 @@
     width: 100%;
   }
 }
+
+/* =====================================
+   RESPONSIVE MOBILE - PRODUCTOS
+   Vista de productos en tarjetas
+===================================== */
+
+@media (max-width: 700px) {
+  /* Contenedor de la tabla */
+  .tabla-productos-contenedor {
+    overflow-x: visible;
+    padding: 12px;
+  }
+
+  .tabla-productos {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    border-collapse: separate;
+  }
+
+  /* Ocultar encabezados de la tabla */
+  .tabla-productos thead {
+    display: none;
+  }
+
+  .tabla-productos tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Cada producto se convierte en una tarjeta */
+  .tabla-productos tbody tr {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #293e5a;
+    border-radius: 12px;
+    background: #15263c;
+  }
+
+  .tabla-productos tbody td {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    padding: 9px 2px;
+    border-top: 1px solid #293e5a;
+    text-align: right;
+    overflow-wrap: anywhere;
+  }
+
+  /* Etiquetas de cada dato */
+  .tabla-productos tbody td::before {
+    flex-shrink: 0;
+    color: #829bb9;
+    font-size: 11px;
+    font-weight: 600;
+    text-align: left;
+  }
+
+  .tabla-productos tbody td:nth-child(1)::before {
+    content: "PRODUCTO";
+  }
+
+  .tabla-productos tbody td:nth-child(2)::before {
+    content: "CÓDIGO";
+  }
+
+  .tabla-productos tbody td:nth-child(3)::before {
+    content: "CATEGORÍA";
+  }
+
+  .tabla-productos tbody td:nth-child(4)::before {
+    content: "PRECIO COMPRA";
+  }
+
+  .tabla-productos tbody td:nth-child(5)::before {
+    content: "PRECIO VENTA";
+  }
+
+  .tabla-productos tbody td:nth-child(6)::before {
+    content: "STOCK";
+  }
+
+  .tabla-productos tbody td:nth-child(7)::before {
+    content: "ACCIONES";
+  }
+
+  /* Primera fila: información principal */
+  .tabla-productos tbody td:first-child {
+    padding: 5px 0 12px;
+    border-top: none;
+    text-align: left;
+  }
+
+  .producto-nombre-celda {
+    min-width: 0;
+    gap: 9px;
+  }
+
+  .producto-nombre-celda strong {
+    overflow-wrap: anywhere;
+  }
+
+  .producto-nombre-celda span:not(.producto-mini-icono) {
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  /* Acciones */
+  .producto-acciones {
+    justify-content: flex-end;
+  }
+
+  /* Mensaje cuando no hay productos */
+  .tabla-productos tbody td.tabla-vacia {
+    display: block;
+    min-height: 180px;
+    padding: 25px 10px;
+    text-align: center !important;
+  }
+
+  .tabla-productos tbody td.tabla-vacia::before {
+    display: none;
+  }
+
+  /* Pie del listado */
+  .productos-pie-tabla {
+    padding: 13px 16px;
+  }
+}

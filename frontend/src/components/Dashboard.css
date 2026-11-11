@@ -592,3 +592,61 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* GHEERA - MENU HAMBURGUESA */
+
+.mobile-menu-toggle {
+  display: none;
+}
+
+@media (max-width: 650px) {
+  .sidebar.sidebar-open {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1001;
+    width: 270px;
+    min-width: 270px;
+    height: 100vh;
+    overflow-y: auto;
+    transform: translateX(0);
+    box-shadow: 10px 0 35px rgba(0, 0, 0, 0.35);
+  }
+
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: rgba(0, 0, 0, 0.65);
+    cursor: pointer;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+    position: fixed;
+    top: 14px;
+    left: 15px;
+    z-index: 1002;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #344963;
+    border-radius: 10px;
+    background: #15243a;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  .dashboard-content {
+    width: 100%;
+    padding-top: 72px;
+  }
+}
+

@@ -1,0 +1,569 @@
+
+.reportes-page {
+  width: 100%;
+  color: #f1f5f9;
+  animation: reportesEntrada 0.3s ease;
+}
+
+@keyframes reportesEntrada {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reportes-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.reportes-eyebrow {
+  color: #22d3ee;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.reportes-header h1 {
+  margin: 7px 0;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.reportes-header p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.reportes-header-icon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  color: #22d3ee;
+  background: #102b40;
+  border: 1px solid #164e63;
+  border-radius: 15px;
+}
+
+.reportes-filtros {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 15px 18px;
+  margin-bottom: 20px;
+  background: #111d30;
+  border: 1px solid #23334a;
+  border-radius: 13px;
+}
+
+.reportes-filtro-titulo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #cbd5e1;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.reportes-filtro-titulo svg {
+  color: #22d3ee;
+}
+
+.reportes-periodos {
+  display: flex;
+  gap: 7px;
+  padding: 4px;
+  background: #0b1525;
+  border-radius: 9px;
+}
+
+.reportes-periodos button {
+  padding: 9px 13px;
+  color: #94a3b8;
+  background: transparent;
+  border: 0;
+  border-radius: 7px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.reportes-periodos button.activo {
+  color: #22d3ee;
+  background: #123448;
+}
+
+.reportes-indicadores {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.reporte-card {
+  min-width: 0;
+  padding: 17px;
+  background: #111d30;
+  border: 1px solid #23334a;
+  border-radius: 13px;
+}
+
+.reporte-card-superior {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.reporte-icono {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+}
+
+.reporte-icono.ventas {
+  color: #22d3ee;
+  background: #123448;
+}
+
+.reporte-icono.operaciones {
+  color: #c4b5fd;
+  background: #29244a;
+}
+
+.reporte-icono.ingresos {
+  color: #4ade80;
+  background: #153b35;
+}
+
+.reporte-icono.egresos {
+  color: #fb7185;
+  background: #451d2a;
+}
+
+.reporte-variacion {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.reporte-variacion.positiva {
+  color: #4ade80;
+}
+
+.reporte-variacion.negativa {
+  color: #fb7185;
+}
+
+.reporte-etiqueta {
+  display: block;
+  margin-bottom: 6px;
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.reporte-valor {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 20px;
+  overflow-wrap: anywhere;
+}
+
+.reporte-card small {
+  color: #64748b;
+  font-size: 10px;
+}
+
+.reportes-graficos {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+  gap: 17px;
+  margin-bottom: 20px;
+}
+
+.reportes-panel {
+  min-width: 0;
+  padding: 21px;
+  background: #111d30;
+  border: 1px solid #23334a;
+  border-radius: 14px;
+}
+
+.reportes-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 22px;
+  color: #22d3ee;
+}
+
+.reportes-panel-header h2 {
+  margin: 0 0 6px;
+  color: #f1f5f9;
+  font-size: 16px;
+  font-weight: 750;
+}
+
+.reportes-panel-header p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.grafico-barras {
+  height: 220px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  gap: 12px;
+  padding: 15px 10px 0;
+  border-bottom: 1px solid #293b53;
+}
+
+.grafico-columna {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.grafico-valor {
+  color: #94a3b8;
+  font-size: 10px;
+}
+
+.grafico-barra-fondo {
+  width: 100%;
+  max-width: 45px;
+  height: 155px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: #0b1525;
+  border-radius: 7px 7px 0 0;
+}
+
+.grafico-barra {
+  width: 100%;
+  min-height: 4px;
+  background: linear-gradient(180deg, #22d3ee, #0e7490);
+  border-radius: 7px 7px 0 0;
+  transition: height 0.3s ease;
+}
+
+.grafico-mes {
+  padding-bottom: 10px;
+  color: #94a3b8;
+  font-size: 10px;
+}
+
+.grafico-aclaracion {
+  margin: 13px 0 0;
+  color: #64748b;
+  font-size: 10px;
+}
+
+.resumen-financiero {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.resumen-financiero > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.resumen-financiero span {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.resumen-financiero strong {
+  font-size: 14px;
+}
+
+.texto-positivo {
+  color: #4ade80;
+}
+
+.texto-negativo {
+  color: #fb7185;
+}
+
+.resumen-balance {
+  padding-top: 17px;
+  border-top: 1px solid #293b53;
+}
+
+.resumen-balance strong {
+  color: #22d3ee;
+  font-size: 19px !important;
+}
+
+.balance-barra {
+  height: 10px;
+  display: flex;
+  overflow: hidden;
+  margin-top: 28px;
+  background: #0b1525;
+  border-radius: 20px;
+}
+
+.balance-ingresos {
+  width: 74%;
+  background: #22c55e;
+}
+
+.balance-egresos {
+  flex: 1;
+  background: #fb7185;
+}
+
+.balance-leyenda {
+  display: flex;
+  gap: 18px;
+  margin-top: 14px;
+}
+
+.balance-leyenda span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #94a3b8;
+  font-size: 10px;
+}
+
+.balance-leyenda i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.punto-ingreso {
+  background: #22c55e;
+}
+
+.punto-egreso {
+  background: #fb7185;
+}
+
+.productos-reporte-panel {
+  margin-bottom: 20px;
+}
+
+.ranking-productos {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.ranking-producto {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.ranking-numero {
+  width: 29px;
+  height: 29px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  color: #22d3ee;
+  background: #123448;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.ranking-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.ranking-textos {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.ranking-textos strong {
+  font-size: 12px;
+}
+
+.ranking-textos span {
+  color: #94a3b8;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.ranking-barra-fondo {
+  width: 100%;
+  height: 7px;
+  overflow: hidden;
+  background: #0b1525;
+  border-radius: 10px;
+}
+
+.ranking-barra {
+  height: 100%;
+  background: linear-gradient(90deg, #0891b2, #22d3ee);
+  border-radius: 10px;
+}
+
+.reportes-inferiores {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 17px;
+  margin-bottom: 20px;
+}
+
+.alertas-lista,
+.deudas-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.alerta-stock-item,
+.deuda-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background: #0b1525;
+  border: 1px solid #1e3047;
+  border-radius: 10px;
+}
+
+.alerta-stock-icon {
+  width: 35px;
+  height: 35px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  color: #fbbf24;
+  background: #44351b;
+  border-radius: 9px;
+}
+
+.alerta-stock-info,
+.deuda-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.alerta-stock-info strong,
+.deuda-info strong {
+  color: #e2e8f0;
+  font-size: 11px;
+}
+
+.alerta-stock-info span,
+.deuda-info span {
+  color: #64748b;
+  font-size: 10px;
+}
+
+.alerta-stock-cantidad {
+  color: #fbbf24;
+  font-size: 10px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.deuda-monto {
+  color: #fb7185;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.reportes-pie {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  padding: 13px 15px;
+  color: #94a3b8;
+  background: #111d30;
+  border: 1px solid #23334a;
+  border-radius: 10px;
+}
+
+.reportes-pie svg {
+  flex-shrink: 0;
+  color: #22d3ee;
+}
+
+.reportes-pie span {
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+@media (max-width: 1100px) {
+  .reportes-indicadores {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .reportes-graficos {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .reportes-header h1 {
+    font-size: 25px;
+  }
+
+  .reportes-filtros {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .reportes-periodos {
+    width: 100%;
+  }
+
+  .reportes-periodos button {
+    flex: 1;
+    padding: 9px 5px;
+    font-size: 10px;
+  }
+
+  .reportes-indicadores {
+    grid-template-columns: 1fr;
+  }
+
+  .reportes-inferiores {
+    grid-template-columns: 1fr;
+  }
+
+  .reportes-panel {
+    padding: 16px;
+  }
+
+  .ranking-textos strong {
+    font-size: 11px;
+  }
+
+  .grafico-barras {
+    gap: 7px;
+  }
+}
